@@ -1,0 +1,44 @@
+.container-ratings {
+  overflow: hidden;
+}
+
+.client-rating-profile:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.client-rating-profile:active .profileImage {
+  opacity: 1;
+  border: 2px solid var(--cian);
+  border-radius: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  margin: -2px;
+}
+
+.activeRating {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.activeRating .profile-name {
+  color: var(--cian);
+}
+
+.client-rating-profile {
+  opacity: 0.5;
+}
+
+.client-rating-profile:hover > .profile-name {
+  color: var(--cian);
+  text-shadow: 0 5px 15px rgba(7, 54, 139, 0.5);
+}
+
+.rating-comments::before {
+  color: aqua;
+  transition: all 600ms ease-in-out;
+}
+
+.rating-comments::after {
+  color: aqua;
+  transition: all 600ms ease-in-out;
+}

@@ -1,13 +1,141 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --cian: #6ad7e5;
+  --grey: #f7f7fa;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Rubik|Syne|Inter");
+
+@tailwind base;
+
+@layer base {
+  html {
+    @apply text-neutral-800;
+  }
+  html.dark {
+    @apply text-neutral-50;
+    @apply bg-neutral-800;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+.rubikFont {
+  font-family: rubik;
+}
+
+.syneFont {
+  font-family: syne;
+}
+
+.interFont {
+  font-family: inter;
+}
+
+.footer {
+  background-color: #00252a;
+}
+
+.menuItem:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+.bg-black-20 {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.bg-black-50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dropdown.active > .ddButton + .ddMenu {
+  opacity: 1;
+}
+
+.homeJumbotron {
+  background-image: url("./images/medium-shot-man-wearing-vr-glasses-1.png") !important;
+}
+
+.aboutJumbotron {
+  background-color: #6ad7e5;
+}
+
+.homeJumbotron h1 {
+  color: white;
+}
+.homeJumbotron h4 {
+  color: rgb(230, 226, 233);
+  font-family: syne;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.aboutJumbotron h1 {
+  color: rgb(0, 0, 0);
+}
+.aboutJumbotron h4 {
+  color: rgb(31 41 55);
+  font-family: rubik;
+}
+
+.rotateCard .card-home {
+  transform: rotate(180deg);
+}
+
+.rotateCard .card-content {
+  transform: rotate(180deg);
+}
+
+.rotateCard .card-image {
+  transform: rotate(180deg);
+}
+
+.heroAbout {
+  max-width: 1201px;
+}
+
+.dash-mark {
+  color: var(--cian);
+  font-size: 100px;
+  padding: 0px;
+  display: flex;
+  height: fit-content;
+}
+.scrollerWrapper {
+  /* background-color: red; */
+  overflow: hidden;
+}
+
+.scroller ul {
+  /* background-color: red; */
+  /* overflow: hidden; */
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% + 0rem));
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
+  .homeJumbotron h4 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .aboutJumbotron .hero-content {
+    justify-content: flex-start;
+    padding: 150px;
+  }
+  .heroAbout {
+    visibility: visible;
+  }
 }
